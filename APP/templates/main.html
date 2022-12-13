@@ -1,0 +1,144 @@
+<!doctype html>
+<style>
+form {
+     margin:auto;
+     width: 35%; 
+
+}
+
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid rgb(57, 22, 163);
+
+} 
+</style>
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ <h3 class="text-muted"></h3>
+ <table align="center">
+    <tbody>
+       <tr>
+          <th align="center"><span style="font-size: 20px;">Прогнозное значение параметра<br />Соотношение матрица-наполнитель</span></th>
+       </tr>
+    </tbody>
+ </table>
+ </head>
+
+<form action="{{url_for('main')}}" method="POST">
+   <fieldset>
+    <tr>
+       <legend>Введите значение плотности, кг/м3</legend>
+       <input name="y1" type="number"
+        >
+   <br>
+   <br>
+   
+    </tr>
+    <tr>
+        <legend>Введите значение модуля упругости, ГПа</legend>
+        <input name="y2" type="number"
+         >
+    <br>
+    <br>
+    
+     </tr>
+     <tr>
+        <legend>Введите значение количества отвердителя, м.%</legend>
+        <input name="y3" type="number"
+         >
+    <br>
+    <br>
+    
+     </tr>
+     <tr>
+        <legend>Введите значение содержания эпоксидных групп,%_2</legend>
+        <input name="y4" type="number"
+         >
+    <br>
+    <br>
+    
+     </tr>
+     <tr>
+        <legend>Введите значение температуры вспышки, С_2</legend>
+        <input name="y5" type="number"
+         >
+    <br>
+    <br>
+    
+     </tr>
+     <tr>
+        <legend>Введите значение поверхностной плотности, г/м2</legend>
+        <input name="y6" type="number"
+         >
+    <br>
+    <br>
+    
+     </tr>
+     <tr>
+        <legend>Введите значение модуля упругости при растяжении, ГПа</legend>
+        <input name="y7" type="number"
+         >
+    <br>
+    <br>
+    
+     </tr>
+     <tr>
+        <legend>Введите значение прочности при растяжении, МПа</legend>
+        <input name="y8" type="number"
+         >
+    <br>
+    <br>
+    
+     </tr>
+     <tr>
+        <legend>Введите значение потребления смолы, г/м2</legend>
+        <input name="y9" type="number"
+         >
+    <br>
+    <br>
+    
+     </tr>
+     <tr>
+        <legend>Введите значение угла нашивки, град</legend>
+        <input name="y10" type="number"
+         >
+    <br>
+    <br>
+    
+     </tr>
+     <tr>
+        <legend>Введите значение шага нашивки</legend>
+        <input name="y11" type="number"
+         >
+    <br>
+    <br>
+    
+     </tr>
+     <tr>
+        <legend>Введите значение плотности нашивки</legend>
+        <input name="y12" type="number"
+         >
+    <br>
+    <br>
+    
+     </tr>
+	 <tr>
+	 <input type="submit">
+	 </tr>
+   </fieldset>
+</form>
+
+<div class='result' align ='center'>
+  {% if result %}
+  <br>
+  <p style="font-size:50px">
+     Результат прогноза
+  </p>
+ <p style="font-size:50px"> {{result}}</p>
+ {% endif %}
+</div>
+
+
+   
